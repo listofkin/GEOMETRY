@@ -21,7 +21,7 @@ int main()
         printf("figure: ");
         printf("circle \n");
         printf("coordinaty x = %c , y = %c \n", x, y);
-        printf("radius kruga %c", r);
+        printf("radius kruga %c \n", r);
     }
     return 0;
 }
