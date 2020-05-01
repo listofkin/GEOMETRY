@@ -2,3 +2,5 @@ geomtry
 makefile
 *.out
 geometry
+*.o
+prog

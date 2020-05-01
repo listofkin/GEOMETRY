@@ -7,11 +7,10 @@ int main(){
     char name[30];
     printf("Enter a shape name \n");
     scanf("%s",name);
-    if(Figure(name) == 0){
-        printf("Enter coordinates :");
+    if(figure(name) == 0){
+        printf("Enter coordinates: ");
         scanf("%d %d",&x,&y);
-        printf("\n");
-        printf("Radius :");
+        printf("Radius: ");
         scanf("%f",&r);
         S = Ploshad(r);
         P = Perimetr(r);
@@ -20,8 +19,8 @@ int main(){
         printf("Error. Incorrect data entered.\n");
         return 0;    
     }
-    printf("%s(%d %d %.2f\n)", name, x, y, r);
+    printf("%s(%d %d %.2f)\n", name, x, y, r);
     printf("Ploshad = %.2f\n",S);
-    printf("Perimetr = %.2f",P);
+    printf("Perimetr = %.2f\n",P);
     return 0;
 }
