@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "geometry.h"
 #define p 3.14
 
 figure(char name[]){
