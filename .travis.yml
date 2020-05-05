@@ -1,7 +1,3 @@
-language: C
-
-compiller: gcc
-
 dist: xenial
 
 script:
