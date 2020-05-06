@@ -11,3 +11,4 @@ build/geometry.o: src/geometry.c
 
 clean:
 	rm -rf build/*.o
+	rm -rf bin/*
