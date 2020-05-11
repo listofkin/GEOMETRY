@@ -2,6 +2,6 @@
 #define GEOMETRY_H
 #include "geometry.h"
 char figure(char name[]);
-float Ploshad(float r);
-float Perimetr(float r);
+int Ploshad(int r);
+int Perimetr(int r);
 #endif// GEOMETRY_H
