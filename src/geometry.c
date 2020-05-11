@@ -1,8 +1,6 @@
-#include <stdio.h>
 #include <string.h>
-#define p 3.14
 
-char figure(char name[])
+int figure(char name[])
 {
     if (strncmp(name, "circle", 6) == 0) {
         return 0;
@@ -10,22 +8,18 @@ char figure(char name[])
         return 1;
 }
 
-float Ploshad(float r)
+int Ploshad(int r)
 {
     if (r <= 0) {
-        printf("Error");
+        return 1;
+    } else
         return 0;
-    }
-    float S = p * r * r;
-    return S;
 }
 
-float Perimetr(float r)
+int Perimetr(int r)
 {
     if (r <= 0) {
-        printf("Error");
+        return 1;
+    } else
         return 0;
-    }
-    float P = 2 * p * r;
-    return P;
 }

@@ -1,13 +1,15 @@
 all: bin/prog
 
 bin/prog: build/main.o build/geometry.o
-	gcc -Wall -Werror build/main.o build/geometry.o -o bin/prog
+	g++ -Wall -Werror build/main.o build/geometry.o -o bin/prog
 
 build/main.o: src/main.c src/geometry.h
-	gcc -Wall -Werror -I src -c src/main.c -o build/main.o
+	g++ -Wall -Werror -I src -c src/main.c -o build/main.o
 
 build/geometry.o: src/geometry.c
-	gcc -Wall -Werror -I src -c src/geometry.c -o build/geometry.o
+	g++ -Wall -Werror -I src -c src/geometry.c -o build/geometry.o
+
+format: clang-format -i src/main.c src/geometry.h src/geometry.c
 
 clean:
 	rm -rf build/geometry.o build/main.o
