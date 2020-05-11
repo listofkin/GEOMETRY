@@ -9,7 +9,8 @@ build/main.o: src/main.c src/geometry.h
 build/geometry.o: src/geometry.c
 	g++ -Wall -Werror -I src -c src/geometry.c -o build/geometry.o
 
-format: clang-format -i src/main.c src/geometry.h src/geometry.c
+format: 
+	clang-format -i src/main.c src/geometry.h src/geometry.c
 
 clean:
 	rm -rf build/geometry.o build/main.o
