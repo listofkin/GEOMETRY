@@ -1,26 +1,46 @@
 #include "geometry.h"
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <iostream>
+#define p 3.14
+using namespace std;
 int main()
 {
-    float r, S, P;
-    int x = 0, y = 0;
+    int r;
+    float S, P;
+    double x, y;
     char name[30];
-    printf("Enter a shape name \n");
+    int e1, e2;
+    cout << "Enter a shape name " << endl;
     scanf("%s", name);
     if (figure(name) == 0) {
-        printf("Enter coordinates: ");
-        scanf("%d %d", &x, &y);
-        printf("Radius: ");
-        scanf("%f", &r);
-        S = Ploshad(r);
-        P = Perimetr(r);
+        cout << "Координаты окружности: " << endl;
+        cin >> x >> y;
+        if(x != (int)x || y != (int)y){
+            cout << "Координаты должны быть целыми! " << endl;
+            return 0;
+        }
+        printf("Радиус: ");
+        cin >> r;
+        e1 = Ploshad(r);
+        if (e1 == 1) {
+            cout << "Неверный радиус " << endl;
+            return 0;
+        } else
+            S = p * r * r;
+        e2 = Perimetr(r);
+        if (e2 == 1) {
+            cout << "Неверный радиус " << endl;
+            return 0;
+        } else
+            P = 2 * p * r;
+
     } else {
-        printf("Error. Incorrect data entered.\n");
+        cout << "Error. Incorrect data entered. " << endl;
         return 0;
     }
-    printf("%s(%d %d %.2f)\n", name, x, y, r);
-    printf("Ploshad = %.2f\n", S);
-    printf("Perimetr = %.2f\n", P);
+    cout << name << "( " << x << " " << y << " " << r << ")" << endl;
+    cout << "Ploshad " << S << endl;
+    cout << "Perimetr " << P << endl;
     return 0;
 }
