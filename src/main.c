@@ -1,7 +1,7 @@
 #include "geometry.h"
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
 #define p 3.14
 using namespace std;
 int main()
@@ -16,7 +16,7 @@ int main()
     if (figure(name) == 0) {
         cout << "Координаты окружности: " << endl;
         cin >> x >> y;
-            if(x != (int)x || y != (int)y){
+        if(x != (int)x || y != (int)y){
             cout << "Координаты должны быть целыми! " << endl;
             return 0;
         }
