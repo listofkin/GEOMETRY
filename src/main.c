@@ -11,12 +11,12 @@ int main()
     double x, y;
     char name[30];
     int e1, e2;
-    cout << "Enter a shape name " << endl;
+    cout << "Название фигуры " << endl;
     scanf("%s", name);
     if (figure(name) == 0) {
         cout << "Координаты окружности: " << endl;
         cin >> x >> y;
-        if(x != (int)x || y != (int)y){
+        if (x != (int)x || y != (int)y) {
             cout << "Координаты должны быть целыми! " << endl;
             return 0;
         }
