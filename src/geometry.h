@@ -4,4 +4,4 @@
 char figure(char name[]);
 int Ploshad(int r);
 int Perimetr(int r);
-#endif// GEOMETRY_H
+#endif // GEOMETRY_H

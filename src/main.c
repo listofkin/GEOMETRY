@@ -16,7 +16,7 @@ int main()
     if (figure(name) == 0) {
         cout << "Координаты окружности: " << endl;
         cin >> x >> y;
-        if(x != (int)x || y != (int)y){
+            if(x != (int)x || y != (int)y){
             cout << "Координаты должны быть целыми! " << endl;
             return 0;
         }
