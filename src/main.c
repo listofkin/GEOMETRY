@@ -2,11 +2,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#define p 3.14
 using namespace std;
 int main()
 {
-    int r;
+    float r;
     float S, P;
     double x, y;
     char name[30];
@@ -27,14 +26,13 @@ int main()
             cout << "Неверный радиус " << endl;
             return 0;
         } else
-            S = p * r * r;
+            S = Ploshad(r);
         e2 = Perimetr(r);
         if (e2 == 1) {
             cout << "Неверный радиус " << endl;
             return 0;
         } else
-            P = 2 * p * r;
-
+            P = Perimetr(r);
     } else {
         cout << "Error. Incorrect data entered. " << endl;
         return 0;
