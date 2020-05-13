@@ -13,4 +13,4 @@ format:
 	clang-format -i src/main.c src/geometry.h src/geometry.c
 
 clean:
-	rm -rf build/geometry.o build/main.o
+	rm -rf build/geometry.o build/main.o bin/prog
