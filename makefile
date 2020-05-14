@@ -12,5 +12,7 @@ build/geometry.o: src/geometry.c
 format: 
 	clang-format -i src/main.c src/geometry.h src/geometry.c
 
+.PHONY:	clean
+
 clean:
 	rm -rf build/geometry.o build/main.o bin/prog
