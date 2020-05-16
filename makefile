@@ -15,6 +15,9 @@ build/intersection.o: src/Intersection.c
 format: 
 	clang-format -i src/main.c src/geometry.h src/geometry.c
 
+run:
+	./bin/prog	
+
 .PHONY:	clean
 
 clean:
