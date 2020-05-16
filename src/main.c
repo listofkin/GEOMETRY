@@ -1,5 +1,5 @@
-#include "geometry.h"
 #include "Intersection.h"
+#include "geometry.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +34,7 @@ int main()
             return 0;
         } else
             P1 = Perimetr(r1);
-                cout << "Координаты окружности: " << endl;
+        cout << "Координаты окружности: " << endl;
         cin >> x2 >> y2;
         if (x2 != (int)x2 || y2 != (int)y2) {
             cout << "Координаты должны быть целыми! " << endl;
@@ -66,7 +66,7 @@ int main()
     cout << "Perimetr " << P2 << endl;
 
     int peres = Intersection(x1, y1, x2, y2, r1, r2);
-    if(peres == 0){
+    if (peres == 0) {
         cout << "Окружности пересекаются " << endl;
     } else
         cout << "Окружности не пересекаются " << endl;
