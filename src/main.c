@@ -53,6 +53,7 @@ int main()
             cout << "Неверный радиус " << endl;
             return 0;
         } else
+            
             P2 = Perimetr(r2);    
     } else {
         cout << "Error. Incorrect data entered. " << endl;
