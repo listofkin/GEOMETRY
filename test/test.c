@@ -30,17 +30,17 @@ CTEST(bad_name, its_not_circle){
 }
 
 CTEST(that_intersection, intersection){
-    int res1 = Intersection(2, 3, 2, 4, 3, 5);
+    int res1 = Intersection(2, 3, 2, 4, 3.5, 5.2);
     ASSERT_EQUAL(1, res1);
     int res2 = Intersection(-2, 0, 1, 2, 5, 5);
-    ASSERT_EQUAL(0, res2);
+    ASSERT_EQUAL(1, res2);
 }
 
 CTEST(good_radius, geometry){
-    int res1_1 = Ploshad(3);
-    int res1_2 = Perimetr(3);
-    ASSERT_EQUAL(0, res1_1);
-    ASSERT_EQUAL(0, res1_2);
+    int res1_1 = Ploshad(3.5);
+    int res1_2 = Perimetr(3.5);
+    ASSERT_EQUAL(38, res1_1);
+    ASSERT_EQUAL(21, res1_2);
 }
 
 CTEST(bad_radius, geometry){
