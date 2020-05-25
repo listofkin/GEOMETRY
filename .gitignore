@@ -4,3 +4,4 @@ makefile
 geometry
 *.o
 prog
+test
