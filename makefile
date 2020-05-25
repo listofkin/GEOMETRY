@@ -1,28 +1,25 @@
-all: bin/prog bin/test format
+all: bin/prog bin/test
 
-bin/prog: build/src/main.o build/src/geometry.o build/src/intersection.o
-	g++ -Wall -Werror build/src/main.o build/src/geometry.o build/src/intersection.o -o bin/prog
+bin/prog: build/src/main.o build/src/geometry.o build/src/Intersection.o
+	gcc -Wall -Werror build/src/main.o build/src/geometry.o build/src/Intersection.o -o bin/prog -lm
 
-build/src/main.o: src/main.c src/geometry.c src/Intersection.c
-	g++ -Wall -Werror -I src -c src/main.c -o build/src/main.o
+build/src/main.o: src/main.c 
+	gcc -Wall -Werror -c src/main.c -o build/src/main.o
 
 build/src/geometry.o: src/geometry.c
-	g++ -Wall -Werror -I src -c src/geometry.c -o build/src/geometry.o
+	gcc -Wall -Werror -c src/geometry.c -o build/src/geometry.o
 
-build/src/intersection.o: src/Intersection.c
-	g++ -Wall -Werror -I src -c src/Intersection.c -o build/src/intersection.o
+build/src/Intersection.o: src/Intersection.c
+	gcc -Wall -Werror -c src/Intersection.c -o build/src/Intersection.o -lm
 
-format: src/geometry.c src/geometry.h src/Intersection.c src/Intersection.h src/main.c  
-	clang-format -i src/main.c src/Intersection.c src/geometry.c src/geometry.h src/Intersection.h test/test.c test/main.c
+build/test/main.o: test/main.c
+	gcc -Wall -Werror -I thirdparty -c test/main.c -o build/test/main.o
 
-bin/test: build/test/main.o build/test/test.o
-	g++ -Wall -Werror build/test/main.o build/test/test.o build/src/intersection.o build/src/geometry.o -o bin/test
+build/test/test.o: test/test.c
+	gcc -Wall -Werror -I thirdparty -I src -c test/test.c -o build/test/test.o
 
-build/test/main.o: thirdparty/ctest.h
-	g++ -I thirdparty -c test/main.c -o build/test/main.o
-
-build/test/test.o: src/geometry.h thirdparty/ctest.h src/Intersection.h
-	g++ -I thirdparty -I src -c test/test.c -o build/test/test.o
+bin/test: build/test/test.o build/test/main.o
+	gcc -Wall -Werror build/src/geometry.o build/src/Intersection.o build/test/test.o build/test/main.o -o bin/test -lm
 
 run:
 	./bin/prog
