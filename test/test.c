@@ -1,8 +1,9 @@
 #include "Intersection.h"
-#include "geometry.h"
 #include "ctest.h"
+#include "geometry.h"
 
-CTEST(good_name, its_circle){
+CTEST(good_name, its_circle)
+{
     char name1[] = "circle";
     int k1 = figure(name1);
     ASSERT_EQUAL(0, k1);
@@ -11,7 +12,8 @@ CTEST(good_name, its_circle){
     ASSERT_EQUAL(0, k2);
 }
 
-CTEST(bad_name, its_not_circle){
+CTEST(bad_name, its_not_circle)
+{
     char name1[] = "aaaaaaaaaa";
     int k1 = figure(name1);
     ASSERT_EQUAL(1, k1);
@@ -29,21 +31,24 @@ CTEST(bad_name, its_not_circle){
     ASSERT_EQUAL(1, k5); 
 }
 
-CTEST(that_intersection, intersection){
+CTEST(that_intersection, intersection)
+{
     int res1 = Intersection(2, 3, 2, 4, 3.5, 5.2);
     ASSERT_EQUAL(1, res1);
     int res2 = Intersection(-2, 0, 1, 2, 5, 5);
     ASSERT_EQUAL(1, res2);
 }
 
-CTEST(good_radius, geometry){
+CTEST(good_radius, geometry)
+{
     int res1_1 = Ploshad(3.5);
     int res1_2 = Perimetr(3.5);
     ASSERT_EQUAL(38, res1_1);
     ASSERT_EQUAL(21, res1_2);
 }
 
-CTEST(bad_radius, geometry){
+CTEST(bad_radius, geometry)
+{
     int res1_1 = Ploshad(-5);
     int res1_2 = Perimetr(-5);
     ASSERT_EQUAL(1, res1_1);
