@@ -18,7 +18,7 @@ int main()
             printf("Координаты должны быть целыми! \n");
             return 0;
         }
-	    if (scanf("%d", &y1) != 1) {
+	if (scanf("%d", &y1) != 1) {
 	    printf("Координаты должны быть целыми! \n");
 	    return 0;
 	}
@@ -41,7 +41,7 @@ int main()
             printf("Координаты должны быть целыми! \n");
             return 0;
         }
-	    if (scanf("%d", &y2) != 1) {
+	if (scanf("%d", &y2) != 1) {
 	    printf("Координаты должны быть целыми!\n");
 	    return 0;
 	}
@@ -58,7 +58,6 @@ int main()
             printf("Неверный радиус \n");
             return 0;
         } else
-            
             P2 = Perimetr(r2);    
     } else {
         printf("Error. Incorrect data entered. \n");
