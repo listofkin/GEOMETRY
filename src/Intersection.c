@@ -1,6 +1,7 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 int Intersection(int x1, int y1, int x2, int y2, int r1, int r2) 
 {
     float d = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
