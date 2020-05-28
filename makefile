@@ -1,4 +1,4 @@
-all: bin/prog bin/test
+all: bin/prog bin/test 
 
 bin/prog: build/src/main.o build/src/geometry.o build/src/Intersection.o
 	gcc -Wall -Werror build/src/main.o build/src/geometry.o build/src/Intersection.o -o bin/prog -lm
@@ -20,12 +20,9 @@ build/test/test.o: test/test.c
 
 bin/test: build/test/test.o build/test/main.o
 	gcc -Wall -Werror build/src/geometry.o build/src/Intersection.o build/test/test.o build/test/main.o -o bin/test -lm
-
+	./bin/test
 run:
-	./bin/prog
-
-run1: 
-	./bin/test		
+	./bin/prog		
 
 .PHONY:	clean
 
