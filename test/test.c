@@ -28,7 +28,7 @@ CTEST(bad_name, its_not_circle)
     ASSERT_EQUAL(1, k4);
     char name5[] = "48e4";
     int k5 = figure(name5);
-    ASSERT_EQUAL(1, k5); 
+    ASSERT_EQUAL(1, k5);
 }
 
 CTEST(that_intersection, intersection)
